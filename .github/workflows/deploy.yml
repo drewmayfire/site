@@ -31,12 +31,11 @@ jobs:
           node-version: 20
 
       - name: Compile SASS
-        run: npx sass style.sass style.css --style=compressed --no-source-map && npx sass fonts.sass fonts.css --style=compressed --no-source-map
+        run: npx sass style.sass style.css --style=compressed --no-source-map
 
       - name: Clean up
         run: |
           rm -f style.sass
-          rm -f fonts.sass
           rm -f LICENSE-CODE
           rm -f LICENSE-FONTS
           rm -f LICENSE-CONTENT
