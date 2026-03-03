@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preload" href="/assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="stylesheet" href="/style.css">
+	<link rel="icon" type="image/png" href="/favicon.png">
+	<title>How I built this site — Andrei Khomenkov</title>
+	<meta property="og:title" content="How I built this site — Andrei Khomenkov">
+    <meta property="og:description" content="How I built a simple blog site">
+    <meta property="og:url" content="https://khomenkov.com/blog/how-i-built-this-site">
+    <meta property="og:type" content="website">
+</head>
+<body>
+	<header>
+		<a href="/">Andrei</a>
+	</header>
+	<main>
+		<article>
+			<h1>How I built this site</h1>
+			<time datetime="2026-03-03">March 3, 2026</time>
+			<p>
+				Recently I've been thinking about creating something that would help me find a job in programming and cybersecurity in the future, and I also just wanted to work on something interesting for myself. In the end, I decided to build my own programming blog in a minimalist style, à la write.as. The priorities were minimalism, readability, and focusing on content rather than design.
+			</p>
+			<h2>What will this site be about?</h2>
+			<p>
+				I wanted to create a small, cozy place where I can write, for example, about a recent discovery in programming, make a detailed write-up on a complex topic, or simply share progress on my pet project. I think this will give me a good boost in learning, especially since I've tried blogging before.
+			</p>
+			<p>
+				I'm particularly interested in low-level programming, hardware, operating systems, and system security. Over the next year, I'm setting a goal to start contributing to the Linux kernel. I think I'll also write about my journey there. The kernel has always attracted me — because of its scale of use, yet at the same time its openness. In the era of AI-generated code, it's nice to be in an engineering environment where everything depends on your knowledge. Sometimes I feel like stepping away from GitHub toward IRC, mailing lists, the terminal, and low-level code.
+			</p>
+			<h2>Technical side of the website</h2>
+				<h3>Hosting</h3>
+				<p>
+					Here I took the simple route and shifted all the hosting and configuration concerns to GitHub Pages. I connected my own domain, and that's it. No need to set up a server, secure it against attacks, or pay for hosting. It's simple. In my case, since I don't need a backend and only use static pages, this kind of hosting is very convenient.
+				</p>
+				<p>
+					Why this approach? It seems to me that when you're learning programming, writing Nginx configs, setting up SSH access, and dealing with similar things would be a distraction. I've tried all that before, and I can say that if you're studying programming, deploying a website is unlikely to help you write better C code. Moreover, building architecture also requires care, and a mistake in a couple of config files you don't fully understand can ruin everything and cost time and effort.
+				</p>
+				<h3>Styling</h3>
+				<p>
+					The initial goal was to write an optimized, small, and unified style for the entire site. I decided not to write plain CSS because I find the constant battle with braces and semicolons annoying. I chose Sass instead, which is compiled into CSS during the build process and ends up slightly lighter than the original. There's also a bit of JavaScript for syntax highlighting and code copying. I'm not an expert in it, so I asked Claude to write it. I think it's better not to hide that some of the code and ideas were suggested by it, but I tried to personally put as much of my own ideas and style into the site as possible.
+				</p>
+				<h3>Architecture</h3>
+				<p>
+					I don't use frameworks, I don't use ready-made engines, I don't use a bunch of third-party JavaScript — I write in a minimalist way for several reasons:
+				</p>
+				<ul>
+					<li>Simplicity. With the amount of content I have, content outweighs excessive technologies, which allows me to write simply and without unnecessary tools.</li>
+					<li>During development, I looked at blogs of well-known developers and publications and drew inspiration from them.</li>
+					<li>I'm attracted to the "old school" of programming and everything related to it. Linux, UNIX, C, GNU, etc. Probably hours of reading documentation on simple web pages echoed here.</li>
+					<li>My approach allows me to stay максимально focused on writing rather than endlessly refining the site. It's also worth remembering that web design isn't something I should be diving deep into.</li>
+					<li>Security. No database, no third-party trackers. All of this reduces the attack surface both for the site and for visitors. I also respect user privacy, so adding trackers is a big red flag for me.</li>
+				</ul>
+			<h2>What would I add in the future?</h2>
+			<p>
+				I think I would improve the style and add responsiveness for different devices. In principle, what else is needed? Once the minimal framework for everything necessary is ready, all that's left is to polish it to perfection, adjusting every element's margin pixel by pixel, trying to find the golden mean. That's how I see the future. And we'll see where this constant pursuit of perfection leads. In any case, my first priority will remain what I write here.
+			</p>
+		</article>
+	</main>
+	<footer>
+		<div class="links">
+			<span>My Links</span>
+			<a href="https://github.com/drewmayfire">GitHub</a>
+			<a href="https://www.linkedin.com/in/andrei-khomenkov">LinkedIn</a>
+			<a href="https://hackerone.com/khomenkov">HackerOne</a>
+			<a href="mailto:khomenkov.cs@proton.me">Email</a>
+			<a href="/pgp">PGP Key</a>
+			<a href="/cv">CV</a>
+		</div>
+		<div class="license">
+			<span>© 2026 Andrei Khomenkov · Content licensed under <a style="margin: 0;" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></span>
+			<a href="https://github.com/drewmayfire/site">Site Source</a>
+		</div>
+	</footer>
+</body>
+</html>
